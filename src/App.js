@@ -1,9 +1,47 @@
 import React from 'react';
 import SearchPage from './component/searchPage';
+import SearchResultPage from './component/searchResultPage';
 import './App.css';
 
-function App() {
-  return <SearchPage />
+export default class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      keyword: '',
+    };
+  }
+
+  onSearch = (keyword) => {
+    this.setState({
+      keyword: keyword,
+    })
+  }
+
+  render() {
+
+    const searchPage = (
+      <SearchPage
+        onSearch={this.onSearch}
+      />
+    );
+
+    if (this.state.keyword === '') {
+      return (
+        <SearchPage
+          onSearch={this.onSearch}
+        />
+      );
+    } else {
+      return (
+        <SearchResultPage 
+          keyword={this.state.keyword}
+          onSearch={this.onSearch}
+        />
+      );
+    }
+  }
+
   // return (
   //   <div className="App">
   //     <header className="App-header">
@@ -15,5 +53,3 @@ function App() {
   //   </div>
   // );
 }
-
-export default App;

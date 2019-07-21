@@ -5,7 +5,7 @@ import { Input } from 'antd';
 const { Search } = Input;
 
 export default class SearchPage extends React.Component {
-
+	
 	render() {
 		return (
 			<div className="search-page-container">
@@ -15,8 +15,8 @@ export default class SearchPage extends React.Component {
 					</div>
 					<div className="search-input-control">
 						<Search
-							onSearch={value => console.log(value)}
-							style={{ width: 546 , height: 45}}
+							onSearch={this.props.onSearch}
+							style={{ width: 546 , height: 45 }}
 						/>
 					</div>
 				</div>

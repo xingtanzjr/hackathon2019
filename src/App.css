@@ -10,6 +10,18 @@
   pointer-events: none;
 }
 
+/* ant input customize style*/
+.ant-input {
+  color: rgb(0, 0, 0);
+  padding: 0px 15px;
+  font-size: 18px;
+}
+
+.ant-input-affix-wrapper .ant-input-suffix .ant-input-search-icon {
+  font-size: 20px;
+  color: rgb(0, 128, 157);
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,7 +34,7 @@
 }
 
 .search-page-container {
-  background-image: url('./images/searchBackground.jpg');
+  background-image: url('./images/bg1.jpg');
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -51,4 +63,134 @@
 
 .search-input-control {
   margin-left: 150px;
+}
+
+/* === for result page ===*/
+
+.simple-bing-logo {
+  width: 35px;
+  height: 40px;
+  overflow: hidden;
+  float: left;
+}
+
+.simple-bing-logo img {
+  height: 60px;
+}
+
+.simple-search-input-control {
+  margin-left: 50px;
+}
+
+.header-search-control {
+  padding: 24px 0px 0px 50px;
+}
+
+.middleNav-container {
+  padding: 10px 0px 0px 100px;
+}
+
+.middleNav-container ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* middle nav bar*/
+.middleNav-container .nav-tab {
+  border-collapse: collapse;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+  border-image-width: 1;
+  line-height: 21px;
+  display: inline-block;
+  padding: 3px 12px;
+}
+
+.middleNav-container .nav-tab:hover {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(204, 204, 204);
+}
+
+.middleNav-container .nav-tab.active {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(0, 128, 157);
+  font-weight: 600;
+}
+
+.middleNav-container .nav-tab span {
+  padding: 0px 8px;
+  display: inline-block;
+  font-size: 13px;
+  color: rgb(68, 68, 68);
+  line-height: 30px;
+  text-decoration-style: solid;
+  text-decoration-line: none;
+  list-style-position: outside;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.spliter-bar {
+  height: 0px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(221, 221, 221);
+}
+
+.statistic-bar {
+  margin-left: 100px;
+  margin-top: 18px;
+}
+
+.statistic-bar span {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  padding-right: 30px;
+}
+
+/* result item part*/
+
+.result-items-container {
+  padding: 0px 0px 0px 80px;
+}
+
+.result-title a {
+  color: rgb(0, 27, 160);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+}
+
+.result-url {
+  display: block;
+  color: rgb(0, 109, 33);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-stretch: normal;
+  font-weight: normal;
+  word-wrap: break-word;
+  line-height: 20px;
+  border-collapse: collapse;
+  text-align: -webkit-match-parent;
+}
+
+.result-description {
+  display: block;
+  color: rgb(102, 102, 102);
+  font-size: 13px;
+  font-stretch: normal;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.result-item-container {
+  padding: 12px 20px;
+  width: 648px;
 }
