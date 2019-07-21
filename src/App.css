@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
 }
@@ -19,15 +21,34 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-page-container {
+  background-image: url('./images/searchBackground.jpg');
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-control {
+  position: absolute;
+  left: 88px;
+  top: 185px;
+}
+
+.bing-logo {
+  width: 132px;
+  height: 52px;
+  overflow: hidden;
+  float: left;
+}
+
+.bing-logo img {
+  margin: 0;
+}
+
+.search-input-control {
+  margin-left: 150px;
 }
