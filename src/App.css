@@ -136,11 +136,45 @@
 
 .create-ad-body .content {
   padding-top: 10px;
+  width: 600px;
+  float: left;
 }
 
 .create-ad-body .main {
   margin-left: 370px;
   padding: 30px 30px;
+}
+
+.create-ad-body .preview {
+  float: left;
+  /* width: 300px;
+  height: 300px; */
+  /* background-color: burlywood; */
+  margin-top: 60px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.create-ad-body .preview .blank {
+  width: 350px;
+  height: 221px;
+  border-color: rgb(204, 204, 204);
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-ad-body .vertical-spliter {
+  float: left;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgb(204, 204, 204);
+  height: 300px;
+  width: 1px;
+  margin: 60px 30px;
 }
 
 .create-ad-body .input-line {

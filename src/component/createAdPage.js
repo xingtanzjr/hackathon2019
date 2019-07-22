@@ -104,12 +104,44 @@ function topBar() {
 }
 
 class MainContent extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            showPreview: false,
+        };
+        this.uploadProps = {
+            name: 'file',
+            action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+            headers: {
+                authorization: 'authorization-text',
+            },
+            onChange: info => {
+                if (info.file.status !== 'uploading') {
+                    console.log(info.file, info.fileList);
+                }
+                if (info.file.status === 'done') {
+                    message.success(`${info.file.name} file uploaded successfully`);
+                    this.setState({
+                        showPreview: true,
+                    });
+                } else if (info.file.status === 'error') {
+                    message.error(`${info.file.name} file upload failed.`);
+                }
+            },
+        };
+    }
+
+    onSubmit = () => {
+        message.success(`create Slide Show Ad successfully`);
+    }
+
     render() {
         return (
             <div className='main'>
                 <span className='title'>Ads</span>
                 <div className='spliter-bar' />
-                <span style={{ 'fontSize': '18px', 'fontWeight': 'bold' }}> Create a Slide Show Ad</span>
+                <span style={{ 'fontSize': '18px', 'fontWeight': 'bold', display: 'block' }}> Create a Slide Show Ad</span>
                 <div className='content'>
                     <div className='input-line'>
                         <span className='label'>Ad Title:</span>
@@ -129,17 +161,19 @@ class MainContent extends React.Component {
                     </div>
                     <div className='input-line'>
                         <span className='label'>PPT:</span>
-                        <Upload {...this.props.uploadProps}>
+                        <Upload {...this.uploadProps}>
                             <Button>
                                 <Icon type="upload" /> Click to Upload
                                 </Button>
                         </Upload>
                     </div>
                     <div className='button-group'>
-                        <Button type="primary">Submit</Button>
-                        <Button >Cancel</Button>
+                        <Button type="primary" onClick={this.onSubmit}>Submit</Button>
+                        <Button style={ {'margin-left': '5px' } }>Cancel</Button>
                     </div>
                 </div>
+                <div className='vertical-spliter' />
+                <Preview showPreview={this.state.showPreview} />
             </div>
         );
     }
@@ -147,36 +181,23 @@ class MainContent extends React.Component {
 
 class Preview extends React.Component {
     render() {
+        const previewContent = this.props.showPreview ? (
+            <div className='ppt-iframe'>
+                <iframe src="https://microsoftapc-my.sharepoint.com/personal/surui_microsoft_com1/_layouts/15/Doc.aspx?sourcedoc={bd24f13a-ef58-4057-bb4d-adb943544ab3}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaa=1" width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office Online</a>.</iframe>
+            </div>
+        ) : (
+            <div className='blank'>Not uploaded</div>
+        );
         return (
             <div className='preview'>
+                {previewContent}
+                <div>PPT Preview</div>
             </div>
         );
     }
 }
 
 class CreateAdPage extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.uploadProps = {
-            name: 'file',
-            action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-            headers: {
-                authorization: 'authorization-text',
-            },
-            onChange(info) {
-                if (info.file.status !== 'uploading') {
-                    console.log(info.file, info.fileList);
-                }
-                if (info.file.status === 'done') {
-                    message.success(`${info.file.name} file uploaded successfully`);
-                } else if (info.file.status === 'error') {
-                    message.error(`${info.file.name} file upload failed.`);
-                }
-            },
-        };
-    }
-
     render() {
         return (
             <div className='create-ad-container'>
