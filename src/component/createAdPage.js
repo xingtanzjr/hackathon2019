@@ -60,7 +60,7 @@ class CreateAdPage extends React.Component {
                     </div>
                 </div>
                 <div className='create-ad-body'>
-                    <span className='title'>Create Ad</span>
+                    <span className='title'>Create Slide show Ad</span>
                     <div className='spliter-bar' />
                     <div className='content'>
                         <div className='input-line'>
@@ -68,7 +68,7 @@ class CreateAdPage extends React.Component {
                             <Input placeholder='input ad name' style={{ width: '400px' }} />
                         </div>
                         <div className='input-line'>
-                            <span className='label'>URL:</span>
+                            <span className='label'>Destination URL:</span>
                             <Input placeholder='input URL' style={{ width: '400px' }} />
                         </div>
                         <div className='input-line'>
