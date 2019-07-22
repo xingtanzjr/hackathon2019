@@ -13,7 +13,7 @@ class SimpleSearchControl extends React.Component {
                 </div>
                 <div className="simple-search-input-control">
                     <Search
-                        defaultValue={this.props.keyword}
+                        defaultValue={this.props.query}
                         onSearch={this.props.onSearch}
                         style={{ width: 630, height: 40 }}
                     />
@@ -61,11 +61,6 @@ class StatisticBar extends React.Component {
 }
 
 class SearchResultItem extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="result-item-container">
@@ -81,6 +76,13 @@ class SearchResultItem extends React.Component {
 }
 
 export default class SearchResult extends React.Component {
+
+    constructor(props) {
+        super(props);
+        const params = new URLSearchParams(props.location.search);
+        this.query = params.get('q');
+    }
+
     render() {
         const items = [];
         for (let i = 0; i < 5; i++) {
@@ -101,7 +103,7 @@ export default class SearchResult extends React.Component {
                 <div className="result-header">
                     <SimpleSearchControl 
                         onSearch={this.props.onSearch}
-                        keyword={this.props.keyword}
+                        query={this.query}
                     />
                     <MiddleNavBar />
                     <SpliterBar />
