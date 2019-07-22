@@ -151,10 +151,10 @@ class MainContent extends React.Component {
                         <span className='label'>Destination URL:</span>
                         <Input placeholder='input URL' />
                     </div>
-                    <div className='input-line'>
+                    {/* <div className='input-line'>
                         <span className='label'>Keywords:</span>
                         <Input placeholder='input description' />
-                    </div>
+                    </div> */}
                     <div className='input-line'>
                         <span className='label'>Description:</span>
                         <Input placeholder='input description' />
