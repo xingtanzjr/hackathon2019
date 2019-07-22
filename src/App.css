@@ -78,9 +78,6 @@
 }
 
 .create-ad-body {
-  margin-top: 100px;
-  margin-left: 15%;
-  width: 70%;
   color: black;
   display: flex;
   flex-direction: column;
@@ -88,20 +85,81 @@
   justify-content: center; */
 }
 
-.create-ad-body span.title {
+.create-ad-body .side-bar {
+  width : 220px;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  background-color: rgb(243, 242, 241);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgb(221, 221, 221);
+}
 
+.create-ad-body .side-bar.adgroup {
+  left: 220px;
+  min-width: 150px;
+  width : 150px;
+}
+
+.create-ad-body .side-bar .side-bar-item {
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: rgb(243, 242, 241);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: 14px;
+  height: 40px;
+  /* text-align: center; */
+  padding: 10px 5px;
+}
+
+.create-ad-body .side-bar .side-bar-item .text {
+  margin-left: 10px;
+}
+
+.create-ad-body .side-bar .side-bar-item.active {
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: rgb(0, 120, 212);
+}
+
+.create-ad-body .side-bar .side-bar-item:hover {
+  background-color: rgb(199, 224, 244);
+}
+
+.create-ad-body span.title {
+  
 }
 
 .create-ad-body .content {
-  padding-top: 30px;
+  padding-top: 10px;
+}
+
+.create-ad-body .main {
+  margin-left: 370px;
+  padding: 30px 30px;
+}
+
+.create-ad-body .input-line {
+  line-height: 1;
+  margin: 30px 0px;
 }
 
 .create-ad-body .input-line span.label {
-  padding-right: 20px;
-  text-align: right;
-  display: inline-block;
-  width: 150px;
-  font-size: 16px;
+  text-align: left;
+  display: block;
+  /* width: 150px; */
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.create-ad-body .input-line input {
+  padding-top: 0px;
+  width: 600px;
 }
 
 .App-header {
