@@ -35,6 +35,7 @@
 
 .search-page-container {
   background-image: url('./images/bg1.jpg');
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
