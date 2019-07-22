@@ -10,16 +10,98 @@
   pointer-events: none;
 }
 
-/* ant input customize style*/
-.ant-input {
-  color: rgb(0, 0, 0);
-  padding: 0px 15px;
-  font-size: 18px;
+/* create ad page*/
+.create-ad-container {
+  min-height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center;
+  justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.ant-input-affix-wrapper .ant-input-suffix .ant-input-search-icon {
-  font-size: 20px;
-  color: rgb(0, 128, 157);
+.top-bar {
+  widows: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  background-color: #2F2F2F;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.top-bar img {
+  height: 20px;
+}
+
+.top-bar .spliter {
+  display: inline-block;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: white;
+  height: 60%;
+  width: 1px;
+  margin: 0px 10px;
+}
+
+.top-bar span.logo-span {
+  font-size: 17px;
+  font-family: "Segoe UI";
+  font-weight: 500;
+}
+
+.top-bar .ant-input-search {
+  width: 30%;
+  height: 30px;
+  margin-left: 20%;
+  margin-right: 15%;
+}
+
+.top-bar .function-control {
+  display: inline-block;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+}
+
+.top-bar .function-control:hover {
+  background-color: darkcyan;
+}
+
+.top-bar .function-control span {
+  font-size: 13px;
+}
+
+.create-ad-body {
+  margin-top: 100px;
+  margin-left: 15%;
+  width: 70%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.create-ad-body span.title {
+
+}
+
+.create-ad-body .content {
+  padding-top: 30px;
+}
+
+.create-ad-body .input-line span.label {
+  padding-right: 20px;
+  text-align: right;
+  display: inline-block;
+  width: 150px;
+  font-size: 16px;
 }
 
 .App-header {
@@ -47,8 +129,20 @@
 
 .search-control {
   position: absolute;
-  left: 88px;
-  top: 185px;
+  left: 8%;
+  top: 15%;
+}
+
+/* ant input customize style*/
+.search-page-container .ant-input {
+  color: rgb(0, 0, 0);
+  padding: 0px 15px;
+  font-size: 18px;
+}
+
+.search-page-container .ant-input-affix-wrapper .ant-input-suffix .ant-input-search-icon {
+  font-size: 20px;
+  color: rgb(0, 128, 157);
 }
 
 .bing-logo {

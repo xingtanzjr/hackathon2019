@@ -3,6 +3,7 @@ import { withRouter } from "react-router";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SearchPage from './component/searchPage';
 import SearchResultPage from './component/searchResultPage';
+import CreateAdPage from './component/createAdPage';
 import './App.css';
 
 export default class App extends React.Component {
@@ -24,6 +25,7 @@ export default class App extends React.Component {
     return (
       <Router>
         <Switch>
+          <Route path="/create" exact component={withRouter(CreateAdPage)} />
           <Route path="/" exact component={withRouter(SearchPage)} />
           <Route path="/search/" component={SearchResultPage} />
         </Switch>
