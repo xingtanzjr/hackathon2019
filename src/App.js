@@ -19,27 +19,20 @@ export default class App extends React.Component {
   }
 
   render() {
-
-    const searchPage = (
-      <SearchPage
-        onSearch={this.onSearch}
-      />
-    );
-
-    if (this.state.keyword === '') {
-      return (
-        <SearchPage
-          onSearch={this.onSearch}
-        />
-      );
-    } else {
+    // if (this.state.keyword === '') {
+    //   return (
+    //     <SearchPage
+    //       onSearch={this.onSearch}
+    //     />
+    //   );
+    // } else {
       return (
         <SearchResultPage 
           keyword={this.state.keyword}
           onSearch={this.onSearch}
         />
       );
-    }
+    // }
   }
 
   // return (

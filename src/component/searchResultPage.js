@@ -69,9 +69,12 @@ class SearchResultItem extends React.Component {
     render() {
         return (
             <div className="result-item-container">
-                <div className="result-title"><a href="#">{this.props.title}</a></div>
+                <div className="result-title"><a href='javascript:void(0);'>{this.props.title}</a></div>
                 <span className="result-url">{this.props.url}</span>
                 <span className="result-description">{this.props.description}</span>
+                <div className="ppt-container">
+                    {this.props.ppt}
+                </div>
             </div>
         );
     }
@@ -81,12 +84,14 @@ export default class SearchResult extends React.Component {
     render() {
         const items = [];
         for (let i = 0; i < 5; i++) {
+            const ppt = i !== 0 ? null : <iframe src="https://microsoftapc-my.sharepoint.com/personal/surui_microsoft_com1/_layouts/15/Doc.aspx?sourcedoc={36fd50e4-2413-4d04-8733-fe2dcad98e92}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaa=1" width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office Online</a>.</iframe>;
             items.push((
                 <SearchResultItem
                     key={`SR-${i}`}
-                    title="BMW USA: Luxury Sedans, SUVs, Convertibles, Coupes & Wagons"
-                    url="https://www.bmwusa.com"
-                    description="Explore BMW models, build your own and find inventory from your nearest BMW center. Get behind the wheel of the Ultimate Driving Machine today and experience the innovation and joy of a BMW. d find inventory from your nearest BMW center. Get behind the wheel of the Ultimate Driving Machine today and experience the innovation and joy of a BMW."
+                    title="Nike Shoes Store - Nike Outlet Store - Nike Factory Outlet"
+                    url="www.nike-shoes.us.com"
+                    description="Stride out mile after mile and attack your courses and routes with the latest women's running shoes at Nike.com. Choose from a variety of color combinations, materials and footwear technologies, and find women's shoes designed for your running style. Enjoy free shipping and returns with NikePlus."
+                    ppt={ppt}
                 />
             ));
         }
