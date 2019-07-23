@@ -122,14 +122,18 @@ class MainContent extends React.Component {
                 }
                 if (info.file.status === 'done') {
                     message.success(`${info.file.name} file uploaded successfully`);
-                    this.setState({
-                        showPreview: true,
-                    });
+                    this.showPreview();
                 } else if (info.file.status === 'error') {
                     message.error(`${info.file.name} file upload failed.`);
                 }
             },
         };
+    }
+
+    showPreview = () => {
+        this.setState({
+            showPreview: true,
+        });
     }
 
     onSubmit = () => {
@@ -164,8 +168,10 @@ class MainContent extends React.Component {
                         <Upload {...this.uploadProps}>
                             <Button>
                                 <Icon type="upload" /> Click to Upload
-                                </Button>
+                            </Button>
                         </Upload>
+                        <span style={{'font-size': '13px'}}>Or use link:</span>
+                        <Input placeholder='paste PPT link here' onChange={this.showPreview}/>
                     </div>
                     <div className='button-group'>
                         <Button type="primary" onClick={this.onSubmit}>Submit</Button>

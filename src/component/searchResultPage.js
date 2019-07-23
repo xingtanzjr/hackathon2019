@@ -1,6 +1,7 @@
 import React from 'react';
 import { Input } from 'antd';
 import simpleBingLogo from '../images/bing-icon.png';
+import searchData from './searchResultData';
 
 const { Search } = Input;
 
@@ -62,14 +63,17 @@ class StatisticBar extends React.Component {
 
 class SearchResultItem extends React.Component {
     render() {
+        const ppt = !this.props.ppt ? null : (
+            <div className="ppt-container">
+                {this.props.ppt}
+            </div>
+        );
         return (
             <div className="result-item-container">
                 <div className="result-title"><a href='javascript:void(0);'>{this.props.title}</a></div>
                 <span className="result-url">{this.props.url}</span>
                 <span className="result-description">{this.props.description}</span>
-                <div className="ppt-container">
-                    {this.props.ppt}
-                </div>
+                {ppt}
             </div>
         );
     }
@@ -86,26 +90,26 @@ export default class SearchResult extends React.Component {
 
     render() {
         const items = [];
-        for (let i = 0; i < 5; i++) {
-            let ppt = i !== 0 ? null : <iframe src="https://microsoftapc-my.sharepoint.com/personal/surui_microsoft_com1/_layouts/15/Doc.aspx?sourcedoc={bd24f13a-ef58-4057-bb4d-adb943544ab3}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaa=1" width="610px" height="367px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office Online</a> 提供支持。</iframe>;
-            if (i === 0 && this.pptFrame) {
+        searchData.forEach((data, idx) => {
+            let ppt = undefined;
+            if (idx === 0 && this.pptFrame) {
                 ppt = <div dangerouslySetInnerHTML={{ __html: this.pptFrame }} />;
             }
             items.push((
                 <SearchResultItem
-                    key={`SR-${i}`}
-                    title="Nike Shoes Store - Nike Outlet Store - Nike Factory Outlet"
-                    url="www.nike-shoes.us.com"
-                    description="Stride out mile after mile and attack your courses and routes with the latest women's running shoes at Nike.com. Choose from a variety of color combinations, materials and footwear technologies, and find women's shoes designed for your running style. Enjoy free shipping and returns with NikePlus."
-                    ppt={ppt}
+                    key={`SR-${idx}`}
+                    title={data.title}
+                    url={data.url}
+                    description={data.description}
+                    ppt={data.ppt}
                 />
             ));
-        }
+        });
 
         return (
             <div className="result-page-container">
                 <div className="result-header">
-                    <SimpleSearchControl 
+                    <SimpleSearchControl
                         onSearch={this.props.onSearch}
                         query={this.query}
                     />
