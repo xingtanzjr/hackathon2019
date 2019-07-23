@@ -124,6 +124,7 @@
   border-left-width: 4px;
   border-left-style: solid;
   border-left-color: rgb(0, 120, 212);
+  background-color: rgb(199, 224, 244);
 }
 
 .create-ad-body .side-bar .side-bar-item:hover {
