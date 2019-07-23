@@ -81,12 +81,16 @@ export default class SearchResult extends React.Component {
         super(props);
         const params = new URLSearchParams(props.location.search);
         this.query = params.get('q');
+        this.pptFrame = params.get('ppt');
     }
 
     render() {
         const items = [];
         for (let i = 0; i < 5; i++) {
-            const ppt = i !== 0 ? null : <iframe src="https://microsoftapc-my.sharepoint.com/personal/surui_microsoft_com1/_layouts/15/Doc.aspx?sourcedoc={bd24f13a-ef58-4057-bb4d-adb943544ab3}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaa=1" width="610px" height="367px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office Online</a> 提供支持。</iframe>;
+            let ppt = i !== 0 ? null : <iframe src="https://microsoftapc-my.sharepoint.com/personal/surui_microsoft_com1/_layouts/15/Doc.aspx?sourcedoc={bd24f13a-ef58-4057-bb4d-adb943544ab3}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaa=1" width="610px" height="367px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office Online</a> 提供支持。</iframe>;
+            if (i === 0 && this.pptFrame) {
+                ppt = <div dangerouslySetInnerHTML={{ __html: this.pptFrame }} />;
+            }
             items.push((
                 <SearchResultItem
                     key={`SR-${i}`}
