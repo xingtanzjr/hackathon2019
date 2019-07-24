@@ -189,7 +189,7 @@ class Preview extends React.Component {
     render() {
         const previewContent = this.props.showPreview ? (
             <div className='ppt-iframe'>
-                <iframe src="https://microsoftapc-my.sharepoint.com/personal/surui_microsoft_com1/_layouts/15/Doc.aspx?sourcedoc={bd24f13a-ef58-4057-bb4d-adb943544ab3}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaa=1" width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office Online</a>.</iframe>
+                <iframe src="https://microsoftapc-my.sharepoint.com/personal/jinrzhan_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={19b3aaa0-121a-40e8-96d0-e6ad8ae77f0f}&amp;action=embedview&amp;wdAr=1.7770833333333333&amp;wdEaa=1" width="350px" height="221px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office Online</a> 提供支持。</iframe>
             </div>
         ) : (
             <div className='blank'>Not uploaded</div>
