@@ -5,7 +5,7 @@ const items = [
         title: 'BMW 7 Series Sedan - Model Overview – BMW USA',
         url: 'https://www.bmwusa.com/vehicles/7-series/sedan/overview.html',
         description: 'The BMW 7 Series is a full-size luxury sedan produced by the German automaker BMW since 1977. It is the successor to the BMW E3 "New Six" sedan and is currently in its sixth generation. The 7 Series is BMW\'s flagship car and is only available in a saloon bodystyle',
-        ppt: <iframe src="https://microsoftapc-my.sharepoint.com/personal/jinrzhan_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={19b3aaa0-121a-40e8-96d0-e6ad8ae77f0f}&amp;action=embedview&amp;wdAr=1.7770833333333333&amp;wdEaa=1" width="350px" height="221px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office Online</a> 提供支持。</iframe>
+        ppt: <iframe src="https://microsoftapc-my.sharepoint.com/personal/jinrzhan_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={19b3aaa0-121a-40e8-96d0-e6ad8ae77f0f}&amp;action=embedview&amp;wdAr=1.7770833333333333&amp;wdEaa=1" width="610px" height="367px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office Online</a> 提供支持。</iframe>
     },
     {
         title: '2019 BMW 7-Series Prices, Reviews, and Pictures | U.S',
