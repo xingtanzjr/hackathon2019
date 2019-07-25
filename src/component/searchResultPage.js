@@ -84,18 +84,26 @@ export default class SearchResult extends React.Component {
     constructor(props) {
         super(props);
         const params = new URLSearchParams(props.location.search);
-        this.query = params.get('q');
-        this.pptFrame = params.get('ppt');
+        this.state = {
+            query: params.get('q'),
+        };
     }
 
     search = () => {
         for (const key in searchItemsData) {
-            if (this.query.toLowerCase().includes(key)) {
+            if (this.state.query.toLowerCase().includes(key)) {
                 return searchItemsData[key];
             }
         }
         return searchItemsData.bmw;
     }
+
+    onSearch = (value) => {
+        this.props.history.push(`/search?q=${value}`);
+        this.setState({
+            query: value,
+        });
+	}
 
     render() {
         const items = [];
@@ -116,8 +124,8 @@ export default class SearchResult extends React.Component {
             <div className="result-page-container">
                 <div className="result-header">
                     <SimpleSearchControl
-                        onSearch={this.props.onSearch}
-                        query={this.query}
+                        onSearch={this.onSearch}
+                        query={this.state.query}
                     />
                     <MiddleNavBar />
                     <SpliterBar />
