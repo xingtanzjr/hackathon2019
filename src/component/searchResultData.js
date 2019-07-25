@@ -103,7 +103,7 @@ const nikeItems = [
         title: 'Nike Men\'s Shoes, Clothing and Gear. Nike.com',
         url: 'https://www.nike.com/men',
         description: 'Shop Nike.com for men\'s shoes, clothing and gear. Check out the latest Nike innovations plus top performance and sportswear styles.',
-        ppt: <iframe src="https://microsoftapc-my.sharepoint.com/personal/bijiang_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={5dc8fb59-9326-45b7-b534-475575bcc6bd}&amp;action=embedview&amp;wdAr=1.7770833333333333" width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office Online</a>.</iframe>
+        ppt: <iframe src="https://microsoftapc-my.sharepoint.com/personal/bijiang_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={5dc8fb59-9326-45b7-b534-475575bcc6bd}&amp;action=embedview&amp;wdAr=1.7770833333333333&amp;wdEaa=1" width="610px" height="367px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office Online</a>.</iframe>
     },
     {
         title: 'Nike Shoes - Buy Nike Shoes for Men, Women & Kids Online | Myntra',
