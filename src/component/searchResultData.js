@@ -100,56 +100,53 @@ const surfaceItems = [
 
 const nikeItems = [
     {
-        title: 'Meet Surface Book 2 - Now in 13.5” or 15” - Microsoft',
-        url: 'https://www.microsoft.com/en-us/p/surface-book-2/8mcpzjjcc98c',
-        description: 'Take a closer look at how Surface Book 2 is the ultimate laptop for running Office* apps and demanding graphics software, and writing and navigating with Surface Pen* and touch. Get the best Surface laptop for PC gaming titles like Sea of Thieves* and PlayerUnknown’s Battlegrounds* — with the',
-        ppt: <iframe src="https://microsoft-my.sharepoint.com/personal/zhjiahui_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={708dc77a-a7c2-4da0-9454-9baf5ecba703}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaa=1" width="610px" height="367px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office Online</a> 提供支持。</iframe>
+        title: 'Nike Men\'s Shoes, Clothing and Gear. Nike.com',
+        url: 'https://www.nike.com/men',
+        description: 'Shop Nike.com for men\'s shoes, clothing and gear. Check out the latest Nike innovations plus top performance and sportswear styles.',
+        ppt: <iframe src="https://microsoftapc-my.sharepoint.com/personal/bijiang_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={5dc8fb59-9326-45b7-b534-475575bcc6bd}&amp;action=embedview&amp;wdAr=1.7770833333333333" width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office Online</a>.</iframe>
     },
     {
-        title: 'Amazon.com: Microsoft Surface 2 (32 GB): Computers',
-        url: 'https://www.amazon.com/Microsoft-Surface-2-32-GB/dp/B00FF6J532',
-        description: 'Oct 26, 2013 · More than a tablet. The 2-position Kickstand lets you work on your lap or at a desk, so you can work comfortably, no matter where you are. Use the onscreen keyboard or click in a keyboard 3 and work even faster. Ports let you transfer files, connect to printers, get more storage, and plug into bigger displays 4.Whether you want to work alone or collaboratively, Surface 2 goes beyond "tablet',
+        title: 'Nike Shoes - Buy Nike Shoes for Men, Women & Kids Online | Myntra',
+        url: 'https://www.myntra.com › Footwear › Nike › Nike Shoes Online',
+        description: 'Nike Shoes - Shop online for Nike shoes for men, women & kids at best price. Choose Nike shoes for sports and casual wear at Myntra ✯ COD ✯ Free Shipping.',
         // ppt={ppt}
     },
     {
-        title: 'Microsoft Surface 2 review: Quality tablet suffering from',
-        url: 'https://www.cnet.com/reviews/microsoft-surface-2-review',
-        description: 'Nov 11, 2018 · Office. Designed and innovated by Microsoft, Surface is engineered to deliver the best experiences across the suite of Office apps. Windows 10 . Designed for the latest versions of Windows, Surface takes advantage of every innovation and update - including Windows Ink, 3D experiences, and a built-in suite of security.',
+        title: 'Nike Shoes, Sneakers & Accessories | Shoe Carnival',
+        url: 'https://www.shoecarnival.com/nike/',
+        description: 'Find the perfect Nike shoes to lace up and stay active this season when you shop Shoe Carnival! Receive FREE Shipping on orders over $75.',
         // ppt={ppt}
     },
     {
-        title: 'Microsoft Surface 2 - Full tablet specifications',
-        url: 'https://www.gsmarena.com/microsoft_surface_2-5725.php',
-        description: 'Microsoft Surface 2 Windows Mobile smartphone. Announced Sep 2013. Features 10.6″ TFT display, Nvidia Tegra 4 T40 chipset, 5 MP primary camera, 3.5 MP front camera, 64 GB storage, 2 GB RAM.',
+        title: 'Men\'s Shoes & Sneakers. Nike.com',
+        url: 'https://www.shoecarnival.com/nike/',
+        description: 'Get laced up for training, sport and lifestyle with the latest designs of men\'s shoes and sneakers from Nike.com. Enjoy free shipping and returns with NikePlus.',
         // ppt={ppt}
     },
     {
-        title: 'Microsoft surface on eBay | Seriously, We have EVERYTHING',
-        url: 'https://www.ebay.com',
-        description: 'Nov 11, 2018 · Office. Designed and innovated by Microsoft, Surface is engineered to deliver the best experiences across the suite of Office apps. Windows 10 . Designed for the latest versions of Windows, Surface takes advantage of every innovation and update - including Windows Ink, 3D experiences, and a built-in suite of security.',
+        title: 'Nike Shoes - Buy Nike Shoes for Men, Women & Kids Online | Myntra',
+        url: 'https://www.myntra.com › Footwear › Nike › Nike Shoes Online',
+        description: 'Nike Shoes - Shop online for Nike shoes for men, women & kids at best price. Choose Nike shoes for sports and casual wear at Myntra ✯ COD ✯ Free Shipping.',
         // ppt={ppt}
     },
     {
-        title: 'Microsoft Surface 2 review: Quality tablet suffering from ...',
-        url: 'https://www.ebay.com/bhp/bmw-7-series',
-        description: 'Nov 11, 2018 · Office. Designed and innovated by Microsoft, Surface is engineered to deliver the best experiences across the suite of Office apps. Windows 10 . Designed for the latest versions of Windows, Surface takes advantage of every innovation and update - including Windows Ink, 3D experiences, and a built-in suite of security.',
+        title: 'Nike Shoes, Sneakers & Accessories | Shoe Carnival',
+        url: 'https://www.shoecarnival.com/nike/',
+        description: 'Find the perfect Nike shoes to lace up and stay active this season when you shop Shoe Carnival! Receive FREE Shipping on orders over $75.',
         // ppt={ppt}
     },
     {
-        title: 'Surface 2 update history - support.microsoft.com',
-        url: 'https://www.autocar.co.uk/car-review/bmw/7-series',
-        description: 'Nov 11, 2018 · Office. Designed and innovated by Microsoft, Surface is engineered to deliver the best experiences across the suite of Office apps. Windows 10 . Designed for the latest versions of Windows, Surface takes advantage of every innovation and update - including Windows Ink, 3D experiences, and a built-in suite of security.',
+        title: 'Men\'s Shoes & Sneakers. Nike.com',
+        url: 'https://www.shoecarnival.com/nike/',
+        description: 'Get laced up for training, sport and lifestyle with the latest designs of men\'s shoes and sneakers from Nike.com. Enjoy free shipping and returns with NikePlus.',
+        // ppt={ppt}
     },
-    {
-        title: 'Surface Laptop 2 review | TechRadar',
-        url: 'https://www.bmw.co.uk/bmw-cars/7-series/2019-saloon',
-        description: 'Nov 11, 2018 · Office. Designed and innovated by Microsoft, Surface is engineered to deliver the best experiences across the suite of Office apps. Windows 10 . Designed for the latest versions of Windows, Surface takes advantage of every innovation and update - including Windows Ink, 3D experiences, and a built-in suite of security.',
-    }
 ];
 
 const items = {
     bmw: bmwItems,
     surface: surfaceItems,
+    nike: nikeItems,
 }
 
 export default items;
