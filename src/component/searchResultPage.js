@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from 'antd';
 import simpleBingLogo from '../images/bing-icon.png';
-import searchData from './searchResultData';
+import searchItemsData from './searchResultData';
 
 const { Search } = Input;
 
@@ -88,13 +88,19 @@ export default class SearchResult extends React.Component {
         this.pptFrame = params.get('ppt');
     }
 
+    search = () => {
+        for (const key in searchItemsData) {
+            if (this.query.toLowerCase().includes(key)) {
+                return searchItemsData[key];
+            }
+        }
+        return searchItemsData.bmw;
+    }
+
     render() {
         const items = [];
+        const searchData = this.search();
         searchData.forEach((data, idx) => {
-            let ppt = undefined;
-            if (idx === 0 && this.pptFrame) {
-                ppt = <div dangerouslySetInnerHTML={{ __html: this.pptFrame }} />;
-            }
             items.push((
                 <SearchResultItem
                     key={`SR-${idx}`}
